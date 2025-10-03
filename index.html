@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixmo Fabtec - Precision 3D Printing & Additive Manufacturing</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter text-text-primary bg-bg-light">
+
+    <header class="bg-bg-white shadow-subtle py-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center px-6">
+            <a href="#home" class="text-2xl font-poppins font-bold text-primary-color logo-text">Pixmo Fabtec</a>
+            <div class="hamburger-menu md:hidden">&#9776;</div>
+            <ul class="flex space-x-8 md:flex hidden" id="nav-links">
+                <li><a href="#home" class="font-medium nav-link transition-colors duration-200">Home</a></li>
+                <li><a href="#about" class="font-medium nav-link transition-colors duration-200">About Us</a></li>
+                <li><a href="#services" class="font-medium nav-link transition-colors duration-200">Services</a></li>
+                <li><a href="#products" class="font-medium nav-link transition-colors duration-200">Solutions</a></li>
+                <li><a href="#process" class="font-medium nav-link transition-colors duration-200">Our Process</a></li> <li><a href="#insights" class="font-medium nav-link transition-colors duration-200">Insights</a></li> <li><a href="#contact" class="font-medium nav-link transition-colors duration-200">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="relative text-white h-screen flex items-center p-6 hero-section">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-glow-effect"></div>
+
+        <div class="relative z-10 max-w-4xl" data-aos="fade-right" data-aos-duration="1000">
+            <h1 class="font-poppins font-extrabold leading-tight mb-4 animate-text-gradient">Innovate. Design. <br>Fabricate. <span class="text-secondary-accent">Future.</span></h1>
+            <p class="font-inter text-xl mb-10 opacity-90">Your Premier Partner in Advanced 3D Printing & Additive Manufacturing for Business, Prototypes & Industrial Applications. We bring your complex ideas to life with unparalleled precision and speed.</p>
+            <a href="#services" class="btn-primary">Explore Our Solutions</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-bg-light">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="font-poppins font-bold text-primary-color section-title">About Pixmo Fabtec</h2>
+            <p class="text-lg text-text-primary max-w-4xl mx-auto leading-relaxed">
+                At Pixmo Fabtec, we are at the forefront of additive manufacturing, dedicated to transforming ideas into tangible realities. With **state-of-the-art 3D printing technology** and a team of seasoned experts, we provide unparalleled products and services tailored for small business owners, B2B clients, and innovative prototype companies. Our commitment to precision, efficiency, and customer satisfaction drives every project, ensuring **premium quality outcomes** that accelerate your product development cycles and bring your vision to market faster.
+            </p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-circle">💡</div>
+                    <h3 class="font-poppins text-xl font-semibold text-primary-color">Innovation Driven</h3>
+                    <p class="text-text-secondary">Pushing boundaries with cutting-edge techniques.</p>
+                </div>
+                <div class="flex flex-col items-center feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-circle">⚙️</div>
+                    <h3 class="font-poppins text-xl font-semibold text-primary-color">Precision Engineered</h3>
+                    <p class="text-text-secondary">Delivering flawless results with meticulous accuracy.</p>
+                </div>
+                <div class="flex flex-col items-center feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-circle">🤝</div>
+                    <h3 class="font-poppins text-xl font-semibold text-primary-color">Partner Focused</h3>
+                    <p class="text-text-secondary">Collaborating closely for your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-bg-medium">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-poppins font-bold text-primary-color section-title" data-aos="fade-up">Our Advanced Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-poppins font-semibold mb-4">Industrial-Grade 3D Printing</h3>
+                    <p class="text-text-secondary">Bring your most intricate designs to life with our precision custom 3D printing services, suitable for a diverse range of materials and scales, from small intricate parts to large-format prototypes.</p>
+                </div>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-poppins font-semibold mb-4">Rapid Prototyping & Iteration</h3>
+                    <p class="text-text-secondary">Accelerate your research and development cycles with our rapid prototyping solutions, turning your concepts into functional models swiftly, allowing for iterative design and testing.</p>
+                </div>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-poppins font-semibold mb-4">Additive Manufacturing Consulting</h3>
+                    <p class="text-text-secondary">Leverage our expert guidance and advanced design assistance to optimize your projects specifically for additive manufacturing, ensuring efficiency, cost-effectiveness, and superior performance.</p>
+                </div>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="font-poppins font-semibold mb-4">Advanced Post-Processing & Finishing</h3>
+                    <p class="text-text-secondary">Ensure your 3D printed parts meet the highest standards of aesthetics and functionality with our comprehensive post-processing options, including sanding, painting, polishing, and assembly.</p>
+                </div>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="font-poppins font-semibold mb-4">Small-to-Medium Batch Production</h3>
+                    <p class="text-text-secondary">Perfect for bridging the gap between prototyping and mass production, our small batch manufacturing services offer flexibility and cost-efficiency for limited runs of custom parts.</p>
+                </div>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="600">
+                    <h3 class="font-poppins font-semibold mb-4">Specialized Material Expertise</h3>
+                    <p class="text-text-secondary">We offer a wide array of advanced materials, from durable engineering plastics to exotic composites and metals, to meet the specific requirements of your application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-20 bg-bg-light relative overflow-hidden">
+        <div class="process-bg-pattern"></div> <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="font-poppins font-bold text-primary-color section-title" data-aos="fade-up">Our Precision Workflow</h2>
+            <p class="text-lg text-text-primary mb-16 max-w-4xl mx-auto">From concept to realization, our streamlined process ensures optimal quality, efficiency, and innovative outcomes.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 process-timeline">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-icon">1</div>
+                    <h3 class="font-poppins font-semibold text-primary-color mb-2">Concept & Consultation</h3>
+                    <p class="text-text-secondary">Collaborate with our experts to define your vision and requirements.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-icon">2</div>
+                    <h3 class="font-poppins font-semibold text-primary-color mb-2">Design & Optimization</h3>
+                    <p class="text-text-secondary">Leverage DfAM (Design for Additive Manufacturing) for peak performance.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-icon">3</div>
+                    <h3 class="font-poppins font-semibold text-primary-color mb-2">Precision Fabrication</h3>
+                    <p class="text-text-secondary">Utilizing advanced machinery for accurate and efficient 3D printing.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-icon">4</div>
+                    <h3 class="font-poppins font-semibold text-primary-color mb-2">Quality Assurance & Delivery</h3>
+                    <p class="text-text-secondary">Rigorous checks ensure superior quality before final delivery.</p>
+                </div>
+            </div>
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="btn-secondary">Start Your Project Today</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="products" class="py-20 bg-bg-medium">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-poppins font-bold text-primary-color section-title" data-aos="fade-up">Transformative Applications</h2>
+            <p class="text-lg text-text-primary mb-10 max-w-4xl mx-auto">From intricate medical devices to robust industrial tooling, see how our 3D printing solutions create impact.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://www.3dnatives.com/en/wp-content/uploads/sites/2/cover-162.jpg" alt="Medical Device Prototype" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold mb-2">Medical & Healthcare</h3>
+                    <p class="text-text-secondary">Custom prosthetics, surgical guides, and anatomical models with biocompatible materials.</p>
+                    <a href="#" class="mt-4 inline-block text-primary-color hover:text-primary-dark font-medium transition-colors duration-200">View Case Study &rarr;</a>
+                </div>
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://indiandefencereview.com/wp-content/uploads/2017/12/3D-Printing.jpg" alt="Custom Aerospace Part" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold mb-2">Aerospace & Defense</h3>
+                    <p class="text-text-secondary">Lightweight, complex components for drones, aircraft, and defense systems.</p>
+                    <a href="#" class="mt-4 inline-block text-primary-color hover:text-primary-dark font-medium transition-colors duration-200">View Case Study &rarr;</a>
+                </div>
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxWUQCFqcQMCn5hIyAZvDsdmoqR8iddqE5Uw&s" alt="Industrial Tooling" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold mb-2">Industrial Tooling & Jigs</h3>
+                    <p class="text-text-secondary">Rapid production of custom tools, fixtures, and molds for manufacturing lines.</p>
+                    <a href="#" class="mt-4 inline-block text-primary-color hover:text-primary-dark font-medium transition-colors duration-200">View Case Study &rarr;</a>
+                </div>
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://www.3ds.com/assets/invest/2022-10/iStock-1182118213%20%281%29.jpg" alt="Custom Consumer Product" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold mb-2">Consumer Goods & Design</h3>
+                    <p class="text-text-secondary">Personalized products, functional prototypes, and innovative design concepts.</p>
+                    <a href="#" class="mt-4 inline-block text-primary-color hover:text-primary-dark font-medium transition-colors duration-200">View Case Study &rarr;</a>
+                </div>
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://www.sculpteo.com/wp-content/uploads/2021/09/generationrobots.jpg" alt="Robotics Components" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold mb-2">Robotics & Automation</h3>
+                    <p class="text-text-secondary">Lightweight, complex components for robotics, drones, and automation systems.</p>
+                    <a href="#" class="mt-4 inline-block text-primary-color hover:text-primary-dark font-medium transition-colors duration-200">View Case Study &rarr;</a>
+                </div>
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://www.manufacturingtomorrow.com/images/upload/images/10694325.jpg" alt="Architectural Model" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold mb-2">Architecture & Construction</h3>
+                    <p class="text-text-secondary">Detailed architectural models, custom fittings, and sustainable building components.</p>
+                    <a href="#" class="mt-4 inline-block text-primary-color hover:text-primary-dark font-medium transition-colors duration-200">View Case Study &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-dark-navy text-white text-center relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="font-poppins font-bold text-white mb-12 section-title" data-aos="fade-up">Our Impact in Numbers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number">1500+</div>
+                    <p class="stat-label">Successful Projects</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number">250+</div>
+                    <p class="stat-label">Industry Partners</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number">99.8%</div>
+                    <p class="stat-label">Client Satisfaction</p>
+                </div>
+            </div>
+            <div class="data-stream-animation" data-aos="fade-up" data-aos-delay="400"></div>
+        </div>
+    </section>
+
+    <section id="insights" class="py-20 bg-bg-light">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-poppins font-bold text-primary-color section-title" data-aos="fade-up">Insights & Innovations</h2>
+            <p class="text-lg text-text-primary mb-10 max-w-4xl mx-auto">Stay at the forefront of additive manufacturing with the latest from Pixmo Fabtec's insights and innovations.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card text-left blog-post-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://i.all3dp.com/workers/images/fit=scale-down,w=1200,gravity=0.5x0.5,format=auto/wp-content/uploads/2021/04/21164314/Large-Scale-Robotic-3D-Printed-Furniture-by-Nagami-using-ABB-technology.jpg" alt="Blog Post 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold text-text-primary mb-2">Robotics & AI in Additive Manufacturing</h3>
+                    <p class="text-text-secondary text-sm mb-4">Explore how advanced robotics and AI are optimizing 3D printing workflows and precision.</p>
+                    <a href="#" class="text-primary-color hover:text-primary-dark font-medium">Read More &rarr;</a>
+                </div>
+                <div class="card text-left blog-post-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://exoswan.com/wp-content/uploads/3D-bioprinting-concept-art-1024x576.jpg" alt="Blog Post 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold text-text-primary mb-2">The Rise of Bioprinting: Shaping Future Healthcare</h3>
+                    <p class="text-text-secondary text-sm mb-4">A deep dive into how 3D bioprinting is revolutionizing medical research and patient solutions.</p>
+                    <a href="#" class="text-primary-color hover:text-primary-dark font-medium">Read More &rarr;</a>
+                </div>
+                <div class="card text-left blog-post-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY1X3aAMHxgw-sKeJmqBYyaoiv8JGyq5NqYw&s" alt="Blog Post 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-poppins text-xl font-semibold text-text-primary mb-2">Sustainable 3D Printing: A Greener Future</h3>
+                    <p class="text-text-secondary text-sm mb-4">Learn about our commitment to eco-friendly practices and material innovation in 3D printing.</p>
+                    <a href="#" class="text-primary-color hover:text-primary-dark font-medium">Read More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-primary-color text-white text-center cta-section" data-aos="zoom-in">
+        <div class="container mx-auto px-6">
+            <h2 class="font-poppins font-bold text-white mb-6">Ready to Transform Your Ideas into Reality?</h2>
+            <p class="text-xl mb-10 opacity-90 max-w-3xl mx-auto">Partner with Pixmo Fabtec for cutting-edge 3D printing and additive manufacturing solutions that accelerate your innovation and drive business growth.</p>
+            <a href="#contact" class="bg-secondary-accent text-primary-dark px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-primary-color transition duration-300 shadow-lg cta-btn">Request a Consultation</a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-bg-light">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-poppins font-bold text-primary-color section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="flex flex-wrap justify-center gap-10">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-8 bg-bg-white rounded-lg shadow-subtle contact-form-card" data-aos="fade-right" data-aos-delay="100">
+                    <h3 class="font-poppins text-2xl font-semibold text-text-primary mb-6">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-md">
+                        <input type="email" placeholder="Your Business Email" class="w-full p-3 border rounded-md">
+                        <input type="text" placeholder="Subject" class="w-full p-3 border rounded-md">
+                        <textarea placeholder="Tell us about your project or inquiry..." rows="6" class="w-full p-3 border rounded-md"></textarea>
+                        <button type="submit" class="btn-primary w-full">Submit Inquiry</button>
+                    </form>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 p-8 bg-bg-white rounded-lg shadow-subtle contact-info-card text-left" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="font-poppins text-2xl font-semibold text-text-primary mb-6">Contact Details</h3>
+                    <p class="mb-4"><strong class="text-primary-color">Email:</strong> info@pixmofabtec.com</p>
+                    <p class="mb-4"><strong class="text-primary-color">Phone:</strong> +91 98765 43210</p>
+                    <p class="mb-4"><strong class="text-primary-color">Address:</strong> Plot No. 42, Innovation Hub, Fabtec City, <br>Gujarat, India - 380001</p>
+                    <div class="mt-8">
+                        <h4 class="font-poppins font-semibold text-text-primary mb-3">Follow Us:</h4>
+                        <div class="flex space-x-5 text-2xl social-icons">
+                            <a href="#" class="text-primary-color hover:text-primary-dark transition-colors duration-200"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary-color hover:text-primary-dark transition-colors duration-200"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#" class="text-primary-color hover:text-primary-dark transition-colors duration-200"><i class="fab fa-twitter-square"></i></a>
+                            <a href="#" class="text-primary-color hover:text-primary-dark transition-colors duration-200"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-navy text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <a href="#home" class="text-3xl font-poppins font-bold text-white logo-text mb-4 md:mb-0">Pixmo Fabtec</a>
+                <ul class="flex space-x-6 md:space-x-8 footer-nav">
+                    <li><a href="#home" class="hover:text-secondary-accent transition-colors duration-200">Home</a></li>
+                    <li><a href="#about" class="hover:text-secondary-accent transition-colors duration-200">About</a></li>
+                    <li><a href="#services" class="hover:text-secondary-accent transition-colors duration-200">Solutions</a></li>
+                    <li><a href="#process" class="hover:text-secondary-accent transition-colors duration-200">Process</a></li>
+                    <li><a href="#contact" class="hover:text-secondary-accent transition-colors duration-200">Contact</a></li>
+                </ul>
+            </div>
+            <p class="text-gray-400 text-sm mt-6">&copy; 2025 Pixmo Fabtec. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true, // Whether animation should happen only once - default
+            mirror: false, // Whether elements should animate out while scrolling past them
+            duration: 800, // Values from 0 to 3000, with step 50ms
+            easing: 'ease-out' // Default easing for AOS animations
+        });
+
+        // Smooth scrolling for anchor links & mobile nav toggle
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop;
+                    // Adjust for fixed header height
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    window.scrollTo({
+                        top: offsetTop - headerOffset,
+                        behavior: 'smooth'
+                    });
+                }
+
+
+                // Close mobile nav if open
+                const navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Toggle mobile navigation
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+
+        // Active navigation link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a.nav-link'); // Use specific class
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const headerHeight = document.querySelector('header').offsetHeight; // Get header height
+            const scrollPos = window.scrollY + headerHeight + 50; // Adjust scroll position for fixed header and a small offset
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Simple typing effect for hero section (conceptual)
+        const heroHeadingSpan = document.querySelector('#home h1 .text-secondary-accent');
+        if (heroHeadingSpan) {
+            const words = ["Future.", "Precision.", "Innovation.", "Impact."];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 150;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                if (isDeleting) {
+                    heroHeadingSpan.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    heroHeadingSpan.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    typingSpeed = 2000; // Pause at end of word
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    typingSpeed = 150; // Speed up after deleting
+                } else {
+                    typingSpeed = isDeleting ? 75 : 150;
+                }
+                setTimeout(type, typingSpeed);
+            }
+            // Start typing only after hero animation (adjust delay as needed)
+            setTimeout(type, 2000);
+        }
+
+    </script>
+</body>
+</html>

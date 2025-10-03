@@ -1,0 +1,712 @@
+/* style.css - Pixmo Fabtec: Cutting-Edge Tech & Precision */
+
+/* --- 1. Custom Fonts --- */
+/* Using Poppins for headings (bold, modern) and Inter for body (clean, readable) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif; /* Clean, modern, highly readable */
+    color: var(--text-primary); /* Dark grey for text */
+    line-height: 1.7; /* Improved readability */
+    background-color: var(--bg-light); /* Very light, almost off-white background */
+    overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+    -moz-osx-font-smoothing: grayscale; /* Smoother font rendering */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; /* Dynamic and strong for headings */
+    color: var(--text-dark); /* Deep almost-black for premium feel */
+    font-weight: 800; /* Extra bold headings */
+}
+
+/* --- 2. Enhanced Color Palette & Variables --- */
+:root {
+    --primary-color: #007BFF;     /* Strong, vibrant tech blue */
+    --primary-dark: #0056b3;      /* Darker shade for hover */
+    --secondary-accent: #00F0FF;  /* Electric light blue/cyan for high-tech accent */
+    --tertiary-light: #CCEEFF;    /* Very light blue for subtle highlights */
+
+    --text-primary: #1C2833;      /* Dark charcoal for main text */
+    --text-secondary: #566573;    /* Medium grey for secondary text */
+    --text-dark: #0A162B;         /* Nearly black for very bold elements */
+
+    --bg-light: #F0F4F8;          /* Light cool grey background */
+    --bg-medium: #E2E8F0;         /* Medium cool grey for alternate sections */
+    --bg-dark: #0D1B2A;           /* Deep dark blue/almost black for striking contrasts (footer, hero overlay) */
+
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadows for depth */
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.4);
+
+    --border-radius-sm: 0.5rem;
+    --border-radius-md: 0.75rem;
+    --border-radius-lg: 1.5rem; /* Even larger border-radius for softer tech look */
+
+    --transition-ease: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); /* Bouncy, energetic transition */
+}
+
+/* Overriding Tailwind classes to use our new palette and consistent sizing */
+.text-primary-color { color: var(--primary-color); }
+.bg-primary-color { background-color: var(--primary-color); }
+.hover\:bg-primary-dark:hover { background-color: var(--primary-dark) !important; }
+.text-secondary-accent { color: var(--secondary-accent); }
+.bg-secondary-accent { background-color: var(--secondary-accent); }
+.text-text-primary { color: var(--text-primary); }
+.text-text-secondary { color: var(--text-secondary); }
+.bg-bg-light { background-color: var(--bg-light); }
+.bg-bg-medium { background-color: var(--bg-medium); }
+.bg-dark-navy { background-color: var(--bg-dark); }
+
+/* --- 3. Fluid Typography (More Aggressive Scaling) --- */
+h1 {
+    font-size: clamp(3.5rem, 8vw, 6rem); /* Min 3.5rem, Max 6rem, scales with viewport width */
+    line-height: 1.1; /* Tighter line height for large headings */
+}
+h2 {
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+}
+p.text-xl {
+    font-size: clamp(1.2rem, 2.8vw, 1.6rem); /* For hero paragraph */
+}
+.stat-number { /* For numbers in the Impact section */
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 900;
+    color: var(--secondary-accent);
+}
+
+/* --- 4. Unique & Innovative Aesthetics --- */
+
+/* Header & Navigation */
+header {
+    background-color: rgba(255, 255, 255, 0.98); /* Almost opaque white */
+    backdrop-filter: blur(12px); /* Stronger glassmorphism */
+    box-shadow: var(--shadow-md);
+    border-bottom: 1px solid rgba(220, 220, 220, 0.8);
+    padding: 1rem 0;
+}
+.logo-text { /* Specific styling for the logo */
+    font-weight: 900; /* Even bolder */
+    letter-spacing: -0.5px;
+}
+header nav ul li a.nav-link { /* Using .nav-link for specificity */
+    position: relative;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: var(--transition-ease);
+}
+header nav ul li a.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Starts from left */
+    bottom: -5px; /* Below the link */
+    width: 0;
+    height: 4px; /* Thicker, more prominent underline */
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-accent)); /* Gradient underline */
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+header nav ul li a.nav-link:hover,
+header nav ul li a.nav-link.active { /* Highlight active link with full gradient */
+    color: var(--primary-color);
+}
+header nav ul li a.nav-link:hover::after,
+header nav ul li a.nav-link.active::after {
+    width: 100%;
+}
+
+/* Hero Section - The showpiece of innovation */
+.hero-section { /* Using a class for hero to add more specific styling */
+    min-height: 100vh; /* Full viewport height */
+    background-image: linear-gradient(to bottom, rgba(13, 27, 42, 0.95), rgba(0, 123, 255, 0.3)), url('https://source.unsplash.com/1920x1080/?futuristic-3d-printer-closeup,circuit-board-abstract'); /* Deep overlay, abstract tech image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax */
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to start */
+    padding-left: 8%;
+    padding-right: 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Grid Overlay */
+.hero-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px; /* Adjust grid size */
+    animation: panGrid 60s linear infinite; /* Slow, continuous pan */
+    opacity: 0.3;
+    z-index: 0;
+}
+
+@keyframes panGrid {
+    from { background-position: 0 0; }
+    to { background-position: 400px 400px; } /* Pan a few grid units */
+}
+
+/* Hero Glow Effect - subtle pulsing behind content */
+.hero-glow-effect {
+    position: absolute;
+    bottom: -20%;
+    right: -20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, transparent 70%); /* Secondary accent glow */
+    border-radius: 50%;
+    filter: blur(80px); /* Heavy blur for soft glow */
+    animation: pulseGlow 8s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.95); opacity: 0.1; }
+    100% { transform: scale(1.05); opacity: 0.25; }
+}
+
+/* Typing effect for hero heading (via JS, but styling here) */
+.animate-text-gradient {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: textGradientShift 5s ease-in-out infinite alternate;
+    display: inline-block; /* Essential for text-fill-color */
+}
+
+@keyframes textGradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+#home h1 .text-secondary-accent {
+    color: var(--secondary-accent); /* Override gradient for this part */
+    -webkit-text-fill-color: var(--secondary-accent);
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1.25rem 3.75rem; /* Even larger buttons */
+    border-radius: var(--border-radius-lg);
+    font-weight: 700;
+    font-size: 1.15rem;
+    transition: var(--transition-ease);
+    box-shadow: var(--shadow-lg);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: inline-flex; /* For better icon alignment if added */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: var(--shadow-xl);
+}
+.btn-primary::after { /* Inner glow for primary */
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.btn-primary:hover::after {
+    width: 300%; height: 300%; opacity: 1;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-accent);
+    color: var(--bg-dark); /* Dark text on light accent */
+    box-shadow: var(--shadow-md);
+}
+.btn-secondary:hover {
+    background-color: #4CAF50; /* A slightly darker green for hover */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Section Titles with more techy underline */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem; /* More space below heading */
+    text-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100px; /* Longer, more prominent */
+    height: 6px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-accent));
+    border-radius: 3px;
+    animation: drawLine 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Animate the line drawing */
+    opacity: 0; /* Hidden initially */
+}
+/* AOS will trigger the animation by adding aos-animate */
+[data-aos].aos-animate .section-title::after {
+    animation: drawLine 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@keyframes drawLine {
+    0% { width: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { width: 100px; opacity: 1; }
+}
+
+
+/* General Card Styles (Services, Products, Blog, Contact Forms) */
+.card {
+    background-color: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-ease);
+    border: 1px solid rgba(220, 220, 220, 0.7);
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure content is above pseudo-elements */
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.01); /* More pronounced lift and scale */
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+/* Pseudo-element for inner light effect on hover */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 240, 255, 0.08) 0%, transparent 60%); /* Secondary accent inner glow */
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    z-index: -1;
+}
+.card:hover::before {
+    opacity: 1;
+}
+
+/* About Us Section - Feature Cards (with techy icons) */
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-ease);
+    border: 1px solid rgba(220, 220, 220, 0.7);
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+.feature-card .icon-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white; /* Emoji are black by default, but if you replace with custom icons */
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-ease);
+}
+.feature-card:hover .icon-circle {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Our Process Section (New & Unique) */
+#process {
+    position: relative;
+    overflow: hidden;
+}
+.process-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(45deg, rgba(0,240,255,0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(0,240,255,0.02) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(0,240,255,0.02) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(0,240,255,0.02) 75%);
+    background-size: 80px 80px; /* Adjust pattern density */
+    background-position: 0 0, 40px 0, 40px 40px, 0 40px;
+    animation: flowBackground 40s linear infinite;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+@keyframes flowBackground {
+    from { background-position: 0 0, 40px 0, 40px 40px, 0 40px; }
+    to { background-position: 800px 800px, 840px 800px, 840px 840px, 800px 840px; }
+}
+
+.process-timeline {
+    position: relative;
+    padding-top: 2rem; /* Space for the line */
+}
+.process-timeline::before { /* Horizontal line */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Width of the line */
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-accent));
+    z-index: 0;
+    /* Optional: animate line on scroll */
+    animation: scaleXLine 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+}
+/* This needs to be triggered by JS or AOS. For now, it will animate on page load.
+   You'd ideally add a class via JS when this section enters the viewport. */
+[data-aos].aos-animate .process-timeline::before {
+    animation: scaleXLine 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes scaleXLine {
+    0% { transform: translateX(-50%) scaleX(0); opacity: 0; }
+    100% { transform: translateX(-50%) scaleX(1); opacity: 1; }
+}
+
+
+.process-step {
+    position: relative;
+    padding-top: 4rem; /* Space for the icon/circle */
+    padding-bottom: 2rem;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-ease);
+    border: 1px solid rgba(220, 220, 220, 0.7);
+    z-index: 1; /* Above the line */
+}
+.process-step:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary-accent);
+}
+.process-step .step-icon {
+    position: absolute;
+    top: -30px; /* Position above the step card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--bg-light); /* To create a layered effect */
+    transition: var(--transition-ease);
+}
+.process-step:hover .step-icon {
+    background: var(--secondary-accent);
+    transform: translateX(-50%) scale(1.1) rotate(10deg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Product Cards (renamed to Application Cards) */
+.product-card img {
+    border-radius: var(--border-radius-md);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-ease);
+}
+.product-card:hover img {
+    transform: scale(1.03); /* Image zooms slightly on hover */
+    box-shadow: var(--shadow-md);
+}
+
+
+/* Interactive Data/Impact Section */
+.stat-item {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly translucent white on dark background */
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px); /* Light glassmorphism */
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-ease);
+    color: white; /* Ensure text is visible */
+}
+.stat-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-accent);
+}
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+/* Conceptual: Data stream animation */
+.data-stream-animation {
+    width: 80%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, var(--secondary-accent), var(--primary-color), transparent);
+    margin: 4rem auto 0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.data-stream-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent);
+    animation: streamFlow 3s linear infinite;
+}
+@keyframes streamFlow {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Blog Section (Renamed to Insights) */
+.blog-post-card img {
+    border-radius: var(--border-radius-md);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+.blog-post-card:hover img {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-md);
+}
+.blog-post-card h3 {
+    color: var(--primary-color);
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(45deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0;
+}
+.cta-section::before { /* Subtle background animation */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+        radial-gradient(circle at top left, rgba(255,255,255,0.08) 1px, transparent 1px),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.2;
+    animation: ctaPatternMove 20s linear infinite;
+}
+@keyframes ctaPatternMove {
+    0% { background-position: 0% 0%, 100% 100%; }
+    100% { background-position: 100% 100%, 0% 0%; }
+}
+.cta-btn {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Stronger shadow for CTA */
+    background: var(--secondary-accent);
+    color: var(--text-dark);
+}
+.cta-btn:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Contact Section forms & info boxes */
+.contact-form-card, .contact-info-card {
+    padding: 3rem; /* More generous padding */
+    border: 1px solid rgba(220, 220, 220, 0.8);
+}
+.contact-form-card h3, .contact-info-card h3 {
+    color: var(--primary-color);
+}
+#contact form input,
+#contact form textarea {
+    border: 1px solid #c0ccda; /* Softer border */
+    background-color: var(--bg-light); /* Consistent light background */
+}
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: var(--secondary-accent) !important; /* Accent color on focus */
+    box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.2) !important; /* Accent glow on focus */
+}
+.social-icons a {
+    font-size: 2.8rem; /* Even larger social icons */
+    color: var(--text-secondary); /* Softer initial color */
+    transition: var(--transition-ease);
+}
+.social-icons a:hover {
+    color: var(--primary-color); /* Primary color on hover */
+    transform: translateY(-5px) scale(1.15); /* More bounce */
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 4.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer a {
+    color: rgba(255, 255, 255, 0.6);
+}
+footer a:hover {
+    color: var(--secondary-accent);
+    transform: translateY(-3px);
+}
+.footer-nav li:not(:last-child) {
+    margin-right: 2rem; /* Consistent spacing */
+}
+
+
+/* --- 5. Responsive Adjustments --- */
+@media (max-width: 768px) {
+    header {
+        padding: 0.75rem 0;
+    }
+    .hamburger-menu {
+        font-size: 2.8rem; /* Larger hamburger */
+    }
+    header nav ul {
+        box-shadow: var(--shadow-xl);
+    }
+    header nav ul li a.nav-link {
+        padding: 0.8rem 0;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 5rem 1.5rem;
+        min-height: 70vh;
+        background-attachment: scroll;
+        justify-content: center; /* Center content on small screens */
+    }
+    .hero-section .relative.z-10 {
+        max-width: 100%;
+    }
+    h1 {
+        font-size: clamp(2.8rem, 10vw, 4rem);
+    }
+    p.text-xl {
+        font-size: clamp(1rem, 4.5vw, 1.25rem);
+    }
+
+    .section-title {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        margin-bottom: 2rem;
+    }
+    .section-title::after {
+        width: 60px;
+        height: 4px;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+    .card h3 {
+        font-size: 1.5rem;
+    }
+    .feature-card .icon-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
+
+    .process-step {
+        padding-top: 3.5rem;
+    }
+    .process-step .step-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        top: -25px;
+    }
+    .process-timeline::before {
+        width: 90%; /* Adjust line width for mobile */
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+    .stat-number {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .cta-section {
+        padding: 4rem 0;
+    }
+
+    .contact-form-card, .contact-info-card {
+        padding: 2rem;
+    }
+    .social-icons a {
+        font-size: 2.2rem;
+    }
+
+    footer .footer-nav {
+        flex-direction: column; /* Stack footer nav links */
+        gap: 0.8rem;
+    }
+    .footer-nav li:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+/* Optional: Scrollbar Styling (More vibrant) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-accent));
+    border-radius: 6px;
+    border: 3px solid var(--bg-light); /* Adds a border to make it pop */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--primary-dark), #4CAF50); /* Darker gradient on hover */
+}
